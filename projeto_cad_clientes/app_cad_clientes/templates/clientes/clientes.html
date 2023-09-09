@@ -1,0 +1,26 @@
+{% extends 'clientes/base.html' %}
+{% block conteudo %}
+<div class="container">
+    <h1>Clientes Cadastrados:</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>nome</th>
+            <th>email</th>
+            <th>razao</th>
+            <th>cnpj</th>
+            <th>endereco</th>
+            <th>celular</th>
+        </tr>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.email}}</td>
+            <td>{{cliente.razao}}</td>
+            <td>{{cliente.cnpj}}</td>
+            <td>{{cliente.endereco}}</td>
+            <td>{{cliente.celular}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
